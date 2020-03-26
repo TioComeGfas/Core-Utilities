@@ -1,0 +1,61 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.google.android.material:material:1.1.0'
+
+    implementation 'com.snatik:storage:2.1.0'
+    //https://github.com/sromku/android-storage
+
+    implementation 'com.github.javiersantos:BottomDialogs:1.2.1'
+    //https://github.com/javiersantos/BottomDialogs
+
+    implementation 'com.tapadoo.android:alerter:1.0.3'
+    //https://github.com/diogobernardino/Alerter
+
+    implementation 'com.androidadvance:topsnackbar:1.1.1'
+    //https://github.com/AndreiD/TSnackBar
+
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+    //https://github.com/TioComeGfas/spots-dialog
+
+
+}
