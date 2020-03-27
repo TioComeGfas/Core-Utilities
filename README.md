@@ -40,6 +40,54 @@ dependencies {
 }
 ```
 
+# Utilidades backend
+
++ Compare: calculo del menor, maximo o promedio de un arreglo
+
+```Java
+
+int[] array = {2,8,3,7,9,1};
+int valueMaxInteger = CompareInteger.newInstance().maximo(array); //maximo de un arreglo
+int valueMinInteger = CompareInteger.newInstance().minimo(array); //minimo de un arreglo
+int valuePromInteger = CompareInteger.newInstance().promedio(array); //promedio de un arreglo
+
+//Comparacion de otros tipos de datos
+// Byte: CompareByte
+// Double: CompareDouble
+// Float: CompareFloat
+// Integer: CompareInteger
+// Long: CompareLong
+```
+
++ Compress: compresion y descompresion de archivos .zip
+
+```Java
+//compresion de archivos
+
+String path; //ruta del archivo
+File file = new File(path);
+Zip.newInstance().compress(path); //ruta absoluta
+Zip.newInstance().compress(path,nameFile); //ruta del archivo y el nombre del archivo a comprimir
+
+//descompresion de archivos
+
+String path; //ruta del archivo
+File file = new File(path);
+Zip.newInstance().decompress(path); //ruta absoluta
+Zip.newInstance().decompress(path,nameFile); //ruta del archivo y el nombre del archivo a comprimir
+```
+
++ Convertion: conversion de tipos de datos
+
+```Java
+//conversion de string a integer
+String number = "2";
+ParseInteger.newInstance().parse(number);
+
+
+
+```
+
 
 
 
