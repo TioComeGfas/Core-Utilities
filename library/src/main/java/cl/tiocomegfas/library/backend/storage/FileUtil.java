@@ -8,7 +8,7 @@ import com.snatik.storage.Storage;
 
 import java.io.File;
 
-public class FileWork {
+public class FileUtil {
 
     public static boolean exist(Context context, String path){
         return new Storage(context).isFileExist(path);

@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import cl.tiocomegfas.library.backend.exception.CompareLongException;
 import cl.tiocomegfas.library.backend.exception.UtilityException;
+import cl.tiocomegfas.library.backend.shared_preferences.Preferences;
 
 public class CompareLong implements Comparable<Long> {
 

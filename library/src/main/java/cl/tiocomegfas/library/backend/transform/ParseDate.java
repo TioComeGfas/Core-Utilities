@@ -2,6 +2,7 @@ package cl.tiocomegfas.library.backend.transform;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -57,4 +58,47 @@ public class ParseDate implements Transform<Date>,FormatDate{
     public Date parse(Date fecha, String format) {
         throw new UnsupportedOperationException();
     }
+
+    public Date changeSecond(Date date, int second){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.SECOND, second);
+        return calendar.getTime();
+    }
+
+    public Date changeMinute(Date date, int minute){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.MINUTE, minute);
+        return calendar.getTime();
+    }
+
+    public Date changeHour(Date date, int hour){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.HOUR , hour);
+        return calendar.getTime();
+    }
+
+    public Date changeDay(Date date, int day){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.DAY_OF_YEAR, day);
+        return calendar.getTime();
+    }
+
+    public Date changeMonth(Date date, int month){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.MONTH, month);
+        return calendar.getTime();
+    }
+
+    public Date changeYear(Date date, int year){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.YEAR, year);
+        return calendar.getTime();
+    }
+
 }

@@ -7,7 +7,7 @@ import com.snatik.storage.Storage;
 import java.io.File;
 import java.util.List;
 
-public class DirectoryWork {
+public class DirectoryUtil {
 
     public static boolean exist(Context context, String path){
         return new Storage(context).isDirectoryExists(path);
