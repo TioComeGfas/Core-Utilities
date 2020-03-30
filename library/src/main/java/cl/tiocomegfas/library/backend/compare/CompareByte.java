@@ -17,7 +17,7 @@ public class CompareByte implements Comparable<Byte> {
     }
 
     @Override
-    public Byte maximo(Byte... a) throws UtilityException {
+    public Byte maximo(Byte[] a) throws UtilityException {
         if(a == null) throw new CompareByteException("El arreglo es nulo");
         if(a.length == 0) throw new CompareByteException("El arreglo se encuentra vacio");
 
@@ -33,7 +33,7 @@ public class CompareByte implements Comparable<Byte> {
     }
 
     @Override
-    public Byte minimo(Byte... a) throws UtilityException {
+    public Byte minimo(Byte[] a) throws UtilityException {
         if(a == null) throw new CompareByteException("El arreglo es nulo");
         if(a.length == 0) throw new CompareByteException("El arreglo se encuentra vacio");
 
@@ -49,7 +49,7 @@ public class CompareByte implements Comparable<Byte> {
     }
 
     @Override
-    public Byte promedio(Byte... a) throws UtilityException {
+    public Byte promedio(Byte[] a) throws UtilityException {
         if(a == null) throw new CompareByteException("El arreglo es nulo");
         if(a.length == 0) throw new CompareByteException("El arreglo se encuentra vacio");
 
