@@ -21,6 +21,16 @@ public class DirectoryUtil {
         return new Storage(context).createDirectory(path,false);
     }
 
+    public static boolean createInternal(Context context, String path){
+        Storage storage = new Storage(context);
+        return new Storage(context).createDirectory(storage.getInternalFilesDirectory()+"/"+path);
+    }
+
+    public static boolean createExternal(Context context, String path){
+        Storage storage = new Storage(context);
+        return new Storage(context).createDirectory(storage.getExternalStorageDirectory()+"/"+path);
+    }
+
     public static boolean create(Context context, String path,boolean override){
         return new Storage(context).createDirectory(path,override);
     }
