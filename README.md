@@ -25,18 +25,17 @@ Agrégar en su raíz build.gradle al final de los repositorios:
 
 ```Gradle
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+    repositories {
+	maven { url 'https://jitpack.io' }
+    }
+}
 ```
 
 Agregar la dependencia
 
 ```Gradle
 dependencies {
-    implementation 'com.github.TioComeGfas:Core-Utilities:1.0'
+    implementation 'com.github.TioComeGfas:Core-Utilities:v1.2'
 }
 ```
 
