@@ -55,7 +55,7 @@ public class FileUtil {
             while( (line = br.readLine()) != null ){
                 str.append(line);
             }
-
+            br.close();
             return str.toString();
         }
 
