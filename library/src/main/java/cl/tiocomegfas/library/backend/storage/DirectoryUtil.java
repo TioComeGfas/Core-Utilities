@@ -21,14 +21,14 @@ public class DirectoryUtil {
         return new Storage(context).createDirectory(path,false);
     }
 
-    public static boolean createInternal(Context context, String path){
+    public static boolean createInternal(Context context, String path,boolean override){
         Storage storage = new Storage(context);
-        return new Storage(context).createDirectory(storage.getInternalFilesDirectory()+"/"+path);
+        return new Storage(context).createDirectory(storage.getInternalFilesDirectory()+"/"+path,override);
     }
 
-    public static boolean createExternal(Context context, String path){
+    public static boolean createExternal(Context context, String path, boolean override){
         Storage storage = new Storage(context);
-        return new Storage(context).createDirectory(storage.getExternalStorageDirectory()+"/"+path);
+        return new Storage(context).createDirectory(storage.getExternalStorageDirectory()+"/"+path,override);
     }
 
     public static boolean create(Context context, String path,boolean override){
