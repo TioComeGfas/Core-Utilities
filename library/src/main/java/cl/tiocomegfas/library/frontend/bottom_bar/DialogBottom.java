@@ -3,7 +3,7 @@ package cl.tiocomegfas.library.frontend.bottom_bar;
 import android.content.Context;
 import com.github.javiersantos.bottomdialogs.BottomDialog;
 
-import cl.tiocomegfas.library.backend.constant.Color;
+import cl.tiocomegfas.library.backend.constant.Colors;
 
 public class DialogBottom {
 
@@ -114,9 +114,9 @@ public class DialogBottom {
                 .setContent(message)
                 .setPositiveText(messagePositive)
                 .setNegativeText(messageNegative)
-                .setPositiveBackgroundColorResource(Color.GREEN_500)
-                .setPositiveTextColorResource(Color.WHITE)
-                .setNegativeTextColorResource(Color.RED_500)
+                .setPositiveBackgroundColorResource(Colors.GREEN_500)
+                .setPositiveTextColorResource(Colors.WHITE)
+                .setNegativeTextColorResource(Colors.RED_500)
                 .onPositive(actionPositive)
                 .onNegative(actionNegative)
                 .show();
@@ -138,9 +138,9 @@ public class DialogBottom {
                 .setContent(message)
                 .setPositiveText("Aceptar")
                 .setNegativeText("Cancelar")
-                .setPositiveBackgroundColorResource(Color.GREEN_500)
-                .setPositiveTextColorResource(Color.WHITE)
-                .setNegativeTextColorResource(Color.RED_500)
+                .setPositiveBackgroundColorResource(Colors.GREEN_500)
+                .setPositiveTextColorResource(Colors.WHITE)
+                .setNegativeTextColorResource(Colors.RED_500)
                 .onPositive(actionPositive)
                 .onNegative(actionNegative)
                 .show();
@@ -159,8 +159,8 @@ public class DialogBottom {
                 .autoDismiss(false)
                 .setContent(message)
                 .setPositiveText("Aceptar")
-                .setPositiveBackgroundColorResource(Color.GREEN_500)
-                .setPositiveTextColorResource(Color.WHITE)
+                .setPositiveBackgroundColorResource(Colors.GREEN_500)
+                .setPositiveTextColorResource(Colors.WHITE)
                 .onPositive(actionPositive)
                 .show();
     }

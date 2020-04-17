@@ -1,5 +1,7 @@
 package cl.tiocomegfas.library.backend.parser;
 
+import cl.tiocomegfas.library.backend.exception.InElementNullException;
+
 /**
  * Clase para realizar la conversion de tipos de datos
  * La cree para optimizar y dejar una sola clase responsable de las conversiones y no tener tanto codigo en los proyectos
@@ -10,7 +12,7 @@ package cl.tiocomegfas.library.backend.parser;
 
 public class Parser {
 
-    public static <T> String toString(T in) throws InElementNullException{
+    public static <T> String toString(T in) throws InElementNullException {
 
         if(in == null){
             //lanza exception
@@ -186,7 +188,7 @@ public class Parser {
         throw new UnsupportedOperationException();
     }
 
-    public static <T> Double toDouble(T in) throws InElementNullException{
+    public static <T> double toDouble(T in) throws InElementNullException{
 
         if(in == null){
             //lanza exception
@@ -230,7 +232,7 @@ public class Parser {
         throw new UnsupportedOperationException();
     }
 
-    public static <T> Long toLong(T in) throws InElementNullException{
+    public static <T> long toLong(T in) throws InElementNullException{
 
         if(in == null){
             //lanza exception
@@ -274,7 +276,7 @@ public class Parser {
         throw new UnsupportedOperationException();
     }
 
-    public static <T> Boolean toBoolean(T in) throws InElementNullException{
+    public static <T> boolean toBoolean(T in) throws InElementNullException{
 
         if(in == null){
             //lanza exception

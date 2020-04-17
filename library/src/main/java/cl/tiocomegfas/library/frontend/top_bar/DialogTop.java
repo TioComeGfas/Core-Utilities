@@ -4,14 +4,14 @@ import android.app.Activity;
 
 import com.tapadoo.alerter.Alerter;
 
-import cl.tiocomegfas.library.backend.constant.Color;
+import cl.tiocomegfas.library.backend.constant.Colors;
 
 public class DialogTop {
 
-    public static final int PRECAUTION = Color.YELLOW_500;
-    public static final int ERROR = Color.RED_500;
-    public static final int INFORMATION = Color.CYAN_500;
-    public static final int SUCCESS = Color.GREEN_500;
+    public static final int PRECAUTION = Colors.YELLOW_500;
+    public static final int ERROR = Colors.RED_500;
+    public static final int INFORMATION = Colors.CYAN_500;
+    public static final int SUCCESS = Colors.GREEN_500;
 
     public static void show(Activity activity, String title, String message, int duration, int color){
         Alerter.

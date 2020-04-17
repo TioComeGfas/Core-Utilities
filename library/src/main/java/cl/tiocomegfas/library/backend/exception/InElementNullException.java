@@ -1,4 +1,4 @@
-package cl.tiocomegfas.library.backend.parser;
+package cl.tiocomegfas.library.backend.exception;
 
 public class InElementNullException extends RuntimeException {
 

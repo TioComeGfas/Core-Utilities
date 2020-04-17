@@ -12,14 +12,9 @@ import java.util.zip.ZipOutputStream;
 
 import cl.tiocomegfas.library.backend.exception.UtilityException;
 
-public class Zip implements Compress {
+public class Zip {
 
-    public static Zip newInstance(){
-        return new Zip();
-    }
-
-    @Override
-    public String compress(File file) throws UtilityException {
+    public static String compress(File file) throws UtilityException {
         if (file.exists()) { // valida si existe el directorio
             File[] ficheros = file.listFiles(); // lista los archivos que hay dentro del directorio
 
@@ -63,8 +58,7 @@ public class Zip implements Compress {
         return file.getPath();
     }
 
-    @Override
-    public String decompress(File file, String name) throws UtilityException {
+    public static String decompress(File file, String name) throws UtilityException {
         if (file.exists()) {
             try {
                 //crea un buffer temporal para el archivo que se va descomprimir
@@ -92,8 +86,7 @@ public class Zip implements Compress {
         return file.getPath()+"/";
     }
 
-    @Override
-    public String decompress(File file) throws UtilityException {
+    public static String decompress(File file) throws UtilityException {
         if (file.exists()) {
             try {
                 //crea un buffer temporal para el archivo que se va descomprimir

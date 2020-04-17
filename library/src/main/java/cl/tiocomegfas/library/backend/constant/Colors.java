@@ -4,7 +4,7 @@ import androidx.annotation.ColorRes;
 
 import cl.tiocomegfas.library.R;
 
-public interface Color {
+public interface Colors {
 
     /* Amber */
     public static final @ColorRes int AMBER_50 = R.color.md_amber_50;

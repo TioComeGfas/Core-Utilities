@@ -1,54 +1,56 @@
 package cl.tiocomegfas.library.backend.ecrypter;
 
 import java.nio.charset.StandardCharsets;
+import cl.tiocomegfas.library.backend.parser.Parser;
 
-import cl.tiocomegfas.library.backend.convert.ParseString;
+public class Base64  {
 
-public class Base64 implements Encrypter {
-
-    public static Base64 newInstance(){
-        return new Base64();
-    }
-
-    @Override
-    public String decode(String value64) {
+    public static String decode(String value64){
         byte[] byteArray = android.util.Base64.decode(value64, android.util.Base64.DEFAULT);
         return new String(byteArray);
     }
 
-    @Override
-    public String encode(String value) {
-        byte[] str_temp = String.valueOf(value).getBytes(StandardCharsets.UTF_8);
-        return android.util.Base64.encodeToString(str_temp, android.util.Base64.DEFAULT);
-    }
+    public static <T> String encode(T value){
 
-    @Override
-    public String encode(int value) {
-        String str = ParseString.newInstance().parse(value);
-        return encode(str);
-    }
+        if(value == null){
+            throw new UnsupportedOperationException("El value es nulo o invalido");
+        }
 
-    @Override
-    public String encode(double value) {
-        String str = ParseString.newInstance().parse(value);
-        return encode(str);
-    }
+        if(value instanceof String){
+            byte[] str_temp = String.valueOf(value).getBytes(StandardCharsets.UTF_8);
+            return android.util.Base64.encodeToString(str_temp, android.util.Base64.DEFAULT);
+        }
 
-    @Override
-    public String encode(float value) {
-        String str = ParseString.newInstance().parse(value);
-        return encode(str);
-    }
+        if(value instanceof Integer){
+            String value64 = Parser.toString(value);
+            byte[] str_temp = value64.getBytes(StandardCharsets.UTF_8);
+            return android.util.Base64.encodeToString(str_temp, android.util.Base64.DEFAULT);
+        }
 
-    @Override
-    public String encode(boolean value) {
-        String str = ParseString.newInstance().parse(value);
-        return encode(str);
-    }
+        if(value instanceof Double){
+            String value64 = Parser.toString(value);
+            byte[] str_temp = value64.getBytes(StandardCharsets.UTF_8);
+            return android.util.Base64.encodeToString(str_temp, android.util.Base64.DEFAULT);
+        }
 
-    @Override
-    public String encode(long value) {
-        String str = ParseString.newInstance().parse(value);
-        return encode(str);
+        if(value instanceof Float){
+            String value64 = Parser.toString(value);
+            byte[] str_temp = value64.getBytes(StandardCharsets.UTF_8);
+            return android.util.Base64.encodeToString(str_temp, android.util.Base64.DEFAULT);
+        }
+
+        if(value instanceof Boolean){
+            String value64 = Parser.toString(value);
+            byte[] str_temp = value64.getBytes(StandardCharsets.UTF_8);
+            return android.util.Base64.encodeToString(str_temp, android.util.Base64.DEFAULT);
+        }
+
+        if(value instanceof Long){
+            String value64 = Parser.toString(value);
+            byte[] str_temp = value64.getBytes(StandardCharsets.UTF_8);
+            return android.util.Base64.encodeToString(str_temp, android.util.Base64.DEFAULT);
+        }
+
+        throw new UnsupportedOperationException("Operacion no valida");
     }
 }
