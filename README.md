@@ -35,7 +35,7 @@ Agregar la dependencia
 
 ```Gradle
 dependencies {
-    implementation 'com.github.TioComeGfas:Core-Utilities:1.4'
+    implementation 'com.github.TioComeGfas:Core-Utilities:1.5'
 }
 ```
 
