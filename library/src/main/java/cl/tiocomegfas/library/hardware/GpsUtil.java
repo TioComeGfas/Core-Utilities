@@ -4,14 +4,11 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Bundle;
 import android.provider.Settings;
 
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.PermissionChecker;
 
 import cl.tiocomegfas.library.hardware.exception.GpsException;
 

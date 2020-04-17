@@ -16,32 +16,32 @@ public class Preferences implements Serializable {
         }
 
         if(value instanceof Byte){
-            sharedPreferences.edit().putInt(id,(byte) value).apply();
+            sharedPreferences.edit().putInt(id,(Byte) value).apply();
             return;
         }
 
         if(value instanceof Integer){
-            sharedPreferences.edit().putInt(id,(int) value).apply();
+            sharedPreferences.edit().putInt(id,(Integer) value).apply();
             return;
         }
 
         if(value instanceof Long){
-            sharedPreferences.edit().putLong(id,(long) value).apply();
+            sharedPreferences.edit().putLong(id,(Long) value).apply();
             return;
         }
 
         if(value instanceof Float){
-            sharedPreferences.edit().putFloat(id,(float) value).apply();
+            sharedPreferences.edit().putFloat(id,(Float) value).apply();
             return;
         }
 
         if(value instanceof Double){
-            sharedPreferences.edit().putFloat(id,(float) value).apply();
+            sharedPreferences.edit().putFloat(id, (Float) value).apply();
             return;
         }
 
         if(value instanceof Boolean){
-            sharedPreferences.edit().putBoolean(id,(boolean) value).apply();
+            sharedPreferences.edit().putBoolean(id,(Boolean) value).apply();
             return;
         }
 
@@ -58,27 +58,27 @@ public class Preferences implements Serializable {
         }
 
         if(defaultValue instanceof Byte){
-            return ((T) Integer.valueOf(sharedPreferences.getInt(id, (byte) defaultValue)));
+            return ((T) Integer.valueOf(sharedPreferences.getInt(id, (Byte) defaultValue)));
         }
 
         if(defaultValue instanceof Integer){
-            return ((T) Integer.valueOf(sharedPreferences.getInt(id, (int) defaultValue)));
+            return ((T) Integer.valueOf(sharedPreferences.getInt(id, (Integer) defaultValue)));
         }
 
         if(defaultValue instanceof Long){
-            return ((T) Long.valueOf(sharedPreferences.getLong(id, (long) defaultValue)));
+            return ((T) Long.valueOf(sharedPreferences.getLong(id, (Long) defaultValue)));
         }
 
         if(defaultValue instanceof Float){
-            return ((T) Float.valueOf(sharedPreferences.getFloat(id, (float) defaultValue)));
+            return ((T) Float.valueOf(sharedPreferences.getFloat(id, (Float) defaultValue)));
         }
 
         if(defaultValue instanceof Double){
-            return ((T) Float.valueOf(sharedPreferences.getFloat(id, (float) defaultValue)));
+            return ((T) Float.valueOf(sharedPreferences.getFloat(id, (Float) defaultValue)));
         }
 
         if(defaultValue instanceof Boolean){
-            return ((T) Boolean.valueOf(sharedPreferences.getBoolean(id, (boolean) defaultValue)));
+            return ((T) Boolean.valueOf(sharedPreferences.getBoolean(id, (Boolean) defaultValue)));
         }
 
         throw new UnsupportedOperationException();

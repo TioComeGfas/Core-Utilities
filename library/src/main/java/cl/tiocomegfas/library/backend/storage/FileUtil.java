@@ -3,7 +3,6 @@ package cl.tiocomegfas.library.backend.storage;
 import android.content.Context;
 import android.graphics.Bitmap;
 
-import com.snatik.storage.Storable;
 import com.snatik.storage.Storage;
 
 import java.io.BufferedReader;
@@ -13,9 +12,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.Collection;
-import java.util.List;
 
 public class FileUtil {
 

@@ -6,8 +6,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-import cl.tiocomegfas.library.backend.exception.UtilityException;
-
 public class DateUtils {
 
     public static Date parse(String date, String format){
